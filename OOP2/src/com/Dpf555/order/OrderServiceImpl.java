@@ -3,31 +3,31 @@ package com.Dpf555.order;
 public class OrderServiceImpl implements OrderService{
     @Override
     public void create() {
-
+        System.out.println("创建订单");
     }
 
     @Override
     public void findOne() {
-
+        System.out.println("查找单个订单");
     }
 
     @Override
     public void findList() {
-
+        System.out.println("查找订单列表");
     }
 
     @Override
     public void cancel() {
-
+        System.out.println("取消订单");
     }
 
     @Override
     public void finish() {
-
+        System.out.println("结束订单");
     }
 
     @Override
     public void paid() {
-
+        System.out.println("支付订单");
     }
 }
