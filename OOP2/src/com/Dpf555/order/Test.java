@@ -3,7 +3,7 @@ package com.Dpf555.order;
 import java.util.Scanner;
 
 public class Test {
-    static void main(String[] args) {
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入：1.国内订单    2.国外订单");
