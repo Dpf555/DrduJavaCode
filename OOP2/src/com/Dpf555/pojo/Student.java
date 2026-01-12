@@ -1,5 +1,7 @@
 package com.Dpf555.pojo;
 
+import java.util.Objects;
+
 public class Student {
     private String name;
     private int age;
@@ -36,13 +38,9 @@ public class Student {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if(obj instanceof Student){
-            Student stu = (Student) obj;   //多态的弊端：不能直接访问子类的私有成员，因此需要转型
-            return this.name.equals(stu.getName()) && this.age == stu.getAge();
-        } else {
-            return false;
-        }
-
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;    //getClass方法用来比较两个对象的字节码，如果字节码不同，代表类型不一致
+        Student student = (Student) o;   //向下转型，调用子类特有的属性
+        return age == student.age && Objects.equals(name, student.name);
     }
 }
